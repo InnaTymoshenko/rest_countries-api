@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import { IoSearch } from 'react-icons/io5'
 
-const InputContainer = styled.label`
+const InputContainer = styled.div`
 	background-color: var(--color-ui-base);
 	padding: 1rem 2rem;
 	display: flex;
@@ -12,7 +12,7 @@ const InputContainer = styled.label`
 	margin-bottom: 1.5rem;
 
 	@media (min-width: 767px) {
-		width: 280px;
+		width: 400px;
 		margin-bottom: 0;
 	}
 `
@@ -31,7 +31,7 @@ const Input = styled.input.attrs({
 export const Search = ({ search, setSearch }) => {
 	return (
 		<InputContainer>
-			<IoSearch />
+			<IoSearch size={'20px'} />
 			<Input onChange={e => setSearch(e.target.value)} value={search} />
 		</InputContainer>
 	)

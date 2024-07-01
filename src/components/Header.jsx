@@ -20,14 +20,15 @@ const Title = styled(Link).attrs({
 	to: '/'
 })`
 	color: var(--color-text);
-	font-size: var(--fs-sm);
+	font-size: var(--fs-lg);
 	text-decoration: none;
 	font-weight: var(--fw-bold);
 `
 
 const ModeSwitcher = styled.div`
 	color: var(--color-text);
-	font-size: var(--fs-sm);
+	font-size: var(--fs-md);
+	font-weight: var(--fw-bold);
 	cursor: pointer;
 	text-transform: capitalize;
 `
@@ -47,7 +48,7 @@ export const Header = () => {
 				<Wrapper>
 					<Title>Where is the world?</Title>
 					<ModeSwitcher onClick={toggleTheme}>
-						{theme === 'light' ? <IoMoonOutline size={'14px'} /> : <IoMoon size={'14px'} />}
+						{theme === 'light' ? <IoMoonOutline size={'20px'} /> : <IoMoon size={'20px'} />}
 
 						<span style={{ marginLeft: '0.75rem' }}>{theme} Theme</span>
 					</ModeSwitcher>

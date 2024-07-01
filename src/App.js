@@ -16,7 +16,7 @@ function App() {
 				<Routes>
 					<Route exact path="/" element={<HomePage countries={countries} setCountries={setCountries} />} />
 					<Route path="/country/:name" element={<Details />} />
-					<Route element={<NotFound />} />
+					<Route path="*" element={<NotFound />} />
 				</Routes>
 			</Main>
 		</React.Fragment>
